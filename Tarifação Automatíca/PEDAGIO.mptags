@@ -1,0 +1,112 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.5.4	//
+!_TAG_REVISION_NAME	MCHPTags	//
+!_TAG_REVISION_VERSION	6.0.1	//
+ACIONA_MANUAL::PORTAbits.RA4	E:\moedeiro\REAL_02\PEDAGIO.c	23;"	d	line:23	file:
+ADCON1_bkp	E:\moedeiro\REAL_02\lcd.h	124;"	l	line:124
+ADCON1_bkp	E:\moedeiro\REAL_02\lcd.h	60;"	l	line:60
+ADCON1_bkp	E:\moedeiro\REAL_02\lcd.h	89;"	l	line:89
+AcionaServo	E:\moedeiro\REAL_02\PEDAGIO.c	78;"	v	line:78
+Ang_0	E:\moedeiro\REAL_02\PEDAGIO.c	35;"	v	line:35
+Ang_30	E:\moedeiro\REAL_02\PEDAGIO.c	36;"	v	line:36
+Ang_60	E:\moedeiro\REAL_02\PEDAGIO.c	37;"	v	line:37
+Ang_90	E:\moedeiro\REAL_02\PEDAGIO.c	38;"	v	line:38
+Ang_Neg30	E:\moedeiro\REAL_02\PEDAGIO.c	34;"	v	line:34
+Ang_Neg60	E:\moedeiro\REAL_02\PEDAGIO.c	33;"	v	line:33
+Ang_Neg90	E:\moedeiro\REAL_02\PEDAGIO.c	32;"	v	line:32
+CONST_T_TIMER0::(65536-416)	E:\moedeiro\REAL_02\PEDAGIO.c	29;"	d	line:29	file:
+CONST_T_TIMER1::(65536-416)	E:\moedeiro\REAL_02\PEDAGIO.c	30;"	d	line:30	file:
+CONTROL::PORTCbits.RC2	E:\moedeiro\REAL_02\PEDAGIO.c	20;"	d	line:20	file:
+CentavosParaReal	E:\moedeiro\REAL_02\PEDAGIO.c	177;"	f	line:177
+CentavosParaReal	E:\moedeiro\REAL_02\PEDAGIO.c	99;"	p	line:99	file:
+ComandoLCD	E:\moedeiro\REAL_02\lcd.h	29;"	p	line:29	signature:(unsigned char comando)
+ComandoLCD	E:\moedeiro\REAL_02\lcd.h	87;"	f	line:87	signature:(unsigned char comando)
+ContadorPulsos	E:\moedeiro\REAL_02\PEDAGIO.c	84;"	v	line:84
+ContagemCent	E:\moedeiro\REAL_02\PEDAGIO.c	86;"	v	line:86
+ContagemReal	E:\moedeiro\REAL_02\PEDAGIO.c	85;"	v	line:85
+D4_LCD::PORTDbits.RD4	E:\moedeiro\REAL_02\lcd.h	42;"	d	line:42
+D5_LCD::PORTDbits.RD5	E:\moedeiro\REAL_02\lcd.h	43;"	d	line:43
+D6_LCD::PORTDbits.RD6	E:\moedeiro\REAL_02\lcd.h	44;"	d	line:44
+D7_LCD::PORTDbits.RD7	E:\moedeiro\REAL_02\lcd.h	45;"	d	line:45
+EN_LCD::PORTDbits.RD3	E:\moedeiro\REAL_02\lcd.h	40;"	d	line:40
+EscreveLCD	E:\moedeiro\REAL_02\lcd.h	122;"	f	line:122	signature:(unsigned char dado)
+EscreveLCD	E:\moedeiro\REAL_02\lcd.h	30;"	p	line:30	signature:(unsigned char dado)
+Flags	E:\moedeiro\REAL_02\PEDAGIO.c	58;"	v	line:58
+InicializaLCD	E:\moedeiro\REAL_02\lcd.h	28;"	p	line:28	signature:(void)
+InicializaLCD	E:\moedeiro\REAL_02\lcd.h	58;"	f	line:58	signature:(void)
+Int_Alta	E:\moedeiro\REAL_02\PEDAGIO.c	109;"	f	line:109	signature:(void)
+Int_Alta	E:\moedeiro\REAL_02\PEDAGIO.c	94;"	p	line:94	file:	signature:(void)
+LED_VERDE::PORTDbits.RD1	E:\moedeiro\REAL_02\PEDAGIO.c	18;"	d	line:18	file:
+LED_VERMELHO::PORTDbits.RD0	E:\moedeiro\REAL_02\PEDAGIO.c	19;"	d	line:19	file:
+LimpaLCD	E:\moedeiro\REAL_02\lcd.h	233;"	f	line:233	signature:(void)
+LimpaLCD	E:\moedeiro\REAL_02\lcd.h	34;"	p	line:34	signature:(void)
+MOEDEIRO_SINAL::PORTBbits.RB0	E:\moedeiro\REAL_02\PEDAGIO.c	22;"	d	line:22	file:
+MostraValorLCD	E:\moedeiro\REAL_02\PEDAGIO.c	185;"	f	line:185
+MostraValorLCD	E:\moedeiro\REAL_02\PEDAGIO.c	98;"	p	line:98	file:
+NumeroLCD	E:\moedeiro\REAL_02\lcd.h	199;"	f	line:199	signature:(unsigned int numero)
+NumeroLCD	E:\moedeiro\REAL_02\lcd.h	32;"	p	line:32	signature:(unsigned int numero)
+OFF::0	E:\moedeiro\REAL_02\PEDAGIO.c	28;"	d	line:28	file:
+ON::1	E:\moedeiro\REAL_02\PEDAGIO.c	27;"	d	line:27	file:
+PosicionaLCD	E:\moedeiro\REAL_02\lcd.h	169;"	f	line:169	signature:(unsigned char linha, unsigned char coluna)
+PosicionaLCD	E:\moedeiro\REAL_02\lcd.h	33;"	p	line:33	signature:(unsigned char linha, unsigned char coluna)
+PosicionaServo	E:\moedeiro\REAL_02\PEDAGIO.c	100;"	p	line:100	file:	signature:(float Angle)
+PosicionaServo	E:\moedeiro\REAL_02\PEDAGIO.c	168;"	f	line:168	signature:(float Angle)
+RS_LCD::PORTDbits.RD2	E:\moedeiro\REAL_02\lcd.h	39;"	d	line:39
+RW_LCD::PORTEbits.RE2	E:\moedeiro\REAL_02\lcd.h	41;"	d	line:41
+SENSOR_SAIDA::PORTBbits.RB5	E:\moedeiro\REAL_02\PEDAGIO.c	21;"	d	line:21	file:
+StringLCD	E:\moedeiro\REAL_02\lcd.h	157;"	f	line:157	signature:(const rom unsigned char *dado)
+StringLCD	E:\moedeiro\REAL_02\lcd.h	31;"	p	line:31	signature:(const rom unsigned char *dado)
+T_D4_LCD::TRISDbits.RD4	E:\moedeiro\REAL_02\lcd.h	50;"	d	line:50
+T_D5_LCD::TRISDbits.RD5	E:\moedeiro\REAL_02\lcd.h	51;"	d	line:51
+T_D6_LCD::TRISDbits.RD6	E:\moedeiro\REAL_02\lcd.h	52;"	d	line:52
+T_D7_LCD::TRISDbits.RD7	E:\moedeiro\REAL_02\lcd.h	53;"	d	line:53
+T_EN_LCD::TRISDbits.RD3	E:\moedeiro\REAL_02\lcd.h	48;"	d	line:48
+T_RS_LCD::TRISDbits.RD2	E:\moedeiro\REAL_02\lcd.h	47;"	d	line:47
+T_RW_LCD::TRISEbits.RE2	E:\moedeiro\REAL_02\lcd.h	49;"	d	line:49
+Trata_Alta	E:\moedeiro\REAL_02\PEDAGIO.c	120;"	f	line:120	signature:(void)
+Trata_Alta	E:\moedeiro\REAL_02\PEDAGIO.c	95;"	p	line:95	file:	signature:(void)
+Trata_Timer0	E:\moedeiro\REAL_02\PEDAGIO.c	136;"	f	line:136	signature:(void)
+Trata_Timer0	E:\moedeiro\REAL_02\PEDAGIO.c	96;"	p	line:96	file:	signature:(void)
+Trata_Timer1	E:\moedeiro\REAL_02\PEDAGIO.c	146;"	f	line:146	signature:(void)
+Trata_Timer1	E:\moedeiro\REAL_02\PEDAGIO.c	97;"	p	line:97	file:	signature:(void)
+ValorPago	E:\moedeiro\REAL_02\PEDAGIO.c	31;"	v	line:31
+_LCD_H_	E:\moedeiro\REAL_02\lcd.h	18;"	d	line:18
+c_teste	E:\moedeiro\REAL_02\PEDAGIO.c	71;"	v	line:71
+c_teste1	E:\moedeiro\REAL_02\PEDAGIO.c	81;"	v	line:81
+cont_100ms	E:\moedeiro\REAL_02\PEDAGIO.c	76;"	v	line:76
+cont_250ms	E:\moedeiro\REAL_02\PEDAGIO.c	75;"	v	line:75
+cont_tempo	E:\moedeiro\REAL_02\PEDAGIO.c	87;"	v	line:87
+conta_pulso	E:\moedeiro\REAL_02\PEDAGIO.c	101;"	p	line:101	file:	signature:(void)
+conta_pulso	E:\moedeiro\REAL_02\PEDAGIO.c	206;"	f	line:206	signature:(void)
+dado	E:\moedeiro\REAL_02\PEDAGIO.c	73;"	v	line:73
+dado1	E:\moedeiro\REAL_02\PEDAGIO.c	74;"	v	line:74
+f_00	E:\moedeiro\REAL_02\PEDAGIO.c	49;"	m	line:49	file:
+f_01	E:\moedeiro\REAL_02\PEDAGIO.c	50;"	m	line:50	file:
+f_02	E:\moedeiro\REAL_02\PEDAGIO.c	51;"	m	line:51	file:
+f_03	E:\moedeiro\REAL_02\PEDAGIO.c	52;"	m	line:52	file:
+f_04	E:\moedeiro\REAL_02\PEDAGIO.c	53;"	m	line:53	file:
+f_05	E:\moedeiro\REAL_02\PEDAGIO.c	54;"	m	line:54	file:
+f_06	E:\moedeiro\REAL_02\PEDAGIO.c	55;"	m	line:55	file:
+f_07	E:\moedeiro\REAL_02\PEDAGIO.c	56;"	m	line:56	file:
+f_08	E:\moedeiro\REAL_02\PEDAGIO.c	57;"	m	line:57	file:
+f_a::Flags.f_02	E:\moedeiro\REAL_02\PEDAGIO.c	62;"	d	line:62	file:
+f_b::Flags.f_03	E:\moedeiro\REAL_02\PEDAGIO.c	63;"	d	line:63	file:
+f_c::Flags.f_04	E:\moedeiro\REAL_02\PEDAGIO.c	64;"	d	line:64	file:
+f_contagem_feita::Flags.f_08	E:\moedeiro\REAL_02\PEDAGIO.c	68;"	d	line:68	file:
+f_medindo::Flags.f_05	E:\moedeiro\REAL_02\PEDAGIO.c	65;"	d	line:65	file:
+f_medindoH::Flags.f_06	E:\moedeiro\REAL_02\PEDAGIO.c	66;"	d	line:66	file:
+f_medindoL::Flags.f_07	E:\moedeiro\REAL_02\PEDAGIO.c	67;"	d	line:67	file:
+f_sensor::Flags.f_00	E:\moedeiro\REAL_02\PEDAGIO.c	60;"	d	line:60	file:
+f_tempo::Flags.f_01	E:\moedeiro\REAL_02\PEDAGIO.c	61;"	d	line:61	file:
+i	E:\moedeiro\REAL_02\PEDAGIO.c	83;"	v	line:83
+i	E:\moedeiro\REAL_02\lcd.h	202;"	l	line:202
+in_ad	E:\moedeiro\REAL_02\PEDAGIO.c	82;"	v	line:82
+j	E:\moedeiro\REAL_02\lcd.h	203;"	l	line:203
+main	E:\moedeiro\REAL_02\PEDAGIO.c	283;"	f	line:283
+pulso	E:\moedeiro\REAL_02\PEDAGIO.c	77;"	v	line:77
+tecla	E:\moedeiro\REAL_02\PEDAGIO.c	72;"	v	line:72
+x	E:\moedeiro\REAL_02\lcd.h	201;"	l	line:201
