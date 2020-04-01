@@ -6,7 +6,7 @@
 
 //--------------------//
 
-//----- CONFIGURA��ES MICRO CONTROLADOR ----//
+//----- CONFIGURAÇÕES MICRO CONTROLADOR ----//
 #pragma config	FOSC	=	HS
 #pragma config	PWRT	=	ON
 #pragma config	PBADEN	=	OFF
@@ -23,7 +23,7 @@
 #define ACIONA_MANUAL		PORTAbits.RA4
 //-----------------------------------------//
 
-//declara��o das constantes
+//declaração das constantes
 #define ON 					1	
 #define OFF 				0
 #define CONST_T_TIMER0 (65536-416)
@@ -40,7 +40,7 @@ const char Ang_90 =					20;
 
 
 //=====================================================================================
-//				DECLARA��O DAS VARI�VEIS
+//				DECLARAÇÃO DAS VARI�VEIS
 //=====================================================================================
 // 1bit
 
@@ -89,7 +89,7 @@ unsigned int cont_tempo = 	0;
 
 
 //=====================================================================================
-//				DECLARA��O DAS ROTINAS
+//				DECLARAÇÃO DAS ROTINAS
 //=====================================================================================
 void Int_Alta (void);
 void Trata_Alta (void);
@@ -102,16 +102,16 @@ void conta_pulso (void);
 
 
 //=====================================================================================
-//					Verifica��o das INTERRUP��ES
+//					Verificação das INTERRUPÇÕES
 //=====================================================================================
-#pragma code Alta = 0x08	//Como se fosse o ORG0000h do ASSEBLER
+#pragma code Alta = 0x08	//Como se fosse o ORG0000h do ASSEMBLER
 
-void Int_Alta (void)		//J� salto para o endere�o onde tem mais espa�o
+void Int_Alta (void)		//Já salta para o endereço onde tem mais espaço
 {
-	Trata_Alta ();			//Vou para rotina pois aqui n�o tem espa�o
+	Trata_Alta ();			//Vou para rotina pois aqui não tem espaço
 }
 #pragma code				//para finalizar o pragma do ORG000h
-#pragma interrupt Trata_Alta//para indicar ao compilador que a prioridade da interrup��o � alta
+#pragma interrupt Trata_Alta//para indicar ao compilador que a prioridade da interrupção é alta
 ///////////////////////////
 
 ///////////////////////////
@@ -131,7 +131,7 @@ void Trata_Alta (void)
 }
 
 //=====================================================================================
-//					Tratamento das INTERRUP��ES
+//					Tratamento das INTERRUPÇÕES
 //=====================================================================================
 void Trata_Timer0(void)
 {
@@ -148,24 +148,15 @@ void Trata_Timer1(void)
 	WriteTimer1(CONST_T_TIMER1);
 	PIR1bits.TMR1IF = 0;
 	
-	//Escreva aqui sua interrup��o
+	//Escreva aqui sua interrupção
 	
 	++cont_tempo;
 	
-		
-	/*
-		++cont_100ms;
-		if (cont_100ms == 100)
-		{
-			cont_100ms=0;
-			f_c=~f_c;
-		}
-	*/
 }
 
 
-// -------------- FUN��ES --------------- //
-void PosicionaServo (float Angle) {		// Fun��o que posiciona o servo e toma o �ngulo como par�metro.
+// -------------- FUNÇÕES --------------- //
+void PosicionaServo (float Angle) {		// Função que posiciona o servo e toma o ângulo como parâmetro.
 	CONTROL = ON;
 	Delay100TCYx(Angle);
 	CONTROL = OFF;
@@ -174,7 +165,7 @@ void PosicionaServo (float Angle) {		// Fun��o que posiciona o servo e toma 
 
 
 
-void CentavosParaReal() {		// Fun��o que converte 100 centavos em 1 real.
+void CentavosParaReal() {		// Função que converte 100 centavos em 1 real.
     if (ContagemCent == 100) {
         ContagemReal = ContagemReal + 1;
         ContagemCent = 0.0;
@@ -182,7 +173,7 @@ void CentavosParaReal() {		// Fun��o que converte 100 centavos em 1 real.
     }
 }
 
-void MostraValorLCD() {		//Fun��o que mostra no display LCD o valor que est� foi inserido no moedeiro.
+void MostraValorLCD() {		//Função que mostra no display LCD o valor que está foi inserido no moedeiro.
 	LimpaLCD();
 	StringLCD("INSERIDOS R$");
 	PosicionaLCD(1, 13);
@@ -207,7 +198,6 @@ void conta_pulso (void)
 {
 		if(f_medindo==0)
 		{
-			
 			if (MOEDEIRO_SINAL == 1)
 			
 			{
@@ -263,11 +253,6 @@ void conta_pulso (void)
 				f_medindo=0;
 				f_contagem_feita=1;
 				cont_tempo=0;
-				/*
-				LimpaLCD();
-				PosicionaLCD(1, 1);
-				NumeroLCD(ContadorPulsos);
-				*/
 				
 			}	
 					
@@ -275,19 +260,15 @@ void conta_pulso (void)
 			
 }	
 	
-
-
-
-
 // ------- FUN��O MAIN --------- //
 void main() {
 
-    // ENTRADAS E SA�DAS DO MICRO //
-    //AD Essa configura��o de AD � comum para todos os pinos de AD
+    // ENTRADAS E SAÍDAS DO MICRO //
+    //AD Essa configuração de AD é comum para todos os pinos de AD
 	ADCON1 = 0b00001111;
 	TRISB = 0b11111111;
 	TRISC = 0b00000000;
-	UCONbits.USBEN = 0;		//Configura��o necess�ria para deixar os pinos RC4 e RC5
+	UCONbits.USBEN = 0;		//Configuração necessária para deixar os pinos RC4 e RC5
 	UCFGbits.UTRDIS = 1;	//como entradas digitais, desabilitando a USB.
 	TRISD = 0b00000000;
 	TRISE = 0b00001111;
@@ -300,33 +281,24 @@ void main() {
     // -------------------------- //
     
 //********************************************************************
-//Configura��o dos Timers
+//Configuração dos Timers
 //********************************************************************
-//Tempo do estouro do timer = t cliclo de m�quina * (carga do registrador)*prescaler
-//no caso, (carga do registrador)=65536-500 poi s� 16 bits
-//Timer0//
-//OpenTimer0(TIMER_INT_ON&T0_16BIT&T0_SOURCE_INT&T0_EDGE_FALL&T0_PS_1_2);
-//WriteTimer0(CONST_T_TIMER0);
-//T0CONbits.TMR0ON = 0;    //bit que liga e desliga o timer
+//Tempo do estouro do timer = t cliclo de máquina * (carga do registrador)*prescaler
+//no caso, (carga do registrador)=65536-500 pois é 16 bits
 
 //Timer1//
 OpenTimer1(TIMER_INT_ON&T1_16BIT_RW&T1_SOURCE_INT&T1_PS_1_2&T1_OSC1EN_OFF&T1_SYNC_EXT_OFF);
 WriteTimer1(CONST_T_TIMER1);
 T1CONbits.TMR1ON = 0;    //bit que liga e desliga o timer
 
-//Timer2//    
-
-//Timer3//
-    
-    
     
 //********************************************************************
-//Configura��o das Interrup��es
+//Configuração das Interrupções
 //********************************************************************
     
-    RCONbits.IPEN = 0;		//Definindo para o PIC que todas as interrup��oe s�o de alta prioridade
-    INTCONbits.GIE = 1;		//habilita a interrup��o global
-    INTCONbits.PEIE = 1;	//habilita as interrup��es de perif�rico
+    RCONbits.IPEN = 0;		//Definindo para o PIC que todas as interrupções são de alta prioridade
+    INTCONbits.GIE = 1;		//habilita a interrupção global
+    INTCONbits.PEIE = 1;	//habilita as interrupções de periférico
     
     
     
@@ -373,13 +345,13 @@ T1CONbits.TMR1ON = 0;    //bit que liga e desliga o timer
 		
 		
 			switch (ContadorPulsos) {
-			case 1: // CASO RECONHE�A A MOEDA DE 1 REAL
+			case 1: // CASO RECONHEÇA A MOEDA DE 1 REAL
 				if (ContagemReal < ValorPago){
 				ContagemReal += 1;
 				MostraValorLCD();
 				}    
 				break;
-			case 2: // CASO RECONHE�A A MOEDA DE 50 CENTAVOS GROSSA
+			case 2: // CASO RECONHEÇA A MOEDA DE 50 CENTAVOS GROSSA
 				if (ContagemReal < ValorPago) {
 					for (i = 0; i < 50; i = i + 1) {
 						ContagemCent = ContagemCent + 1;
@@ -388,7 +360,7 @@ T1CONbits.TMR1ON = 0;    //bit que liga e desliga o timer
 						MostraValorLCD();
 	            	}
 				break;
-			case 3: // CASO RECONHE�A A MOEDA DE 50 CENTAVOS FINA
+			case 3: // CASO RECONHEÇA A MOEDA DE 50 CENTAVOS FINA
 				if (ContagemReal < ValorPago) {
 					for (i = 0; i < 50; i = i + 1) {
 						ContagemCent = ContagemCent + 1;
@@ -398,7 +370,7 @@ T1CONbits.TMR1ON = 0;    //bit que liga e desliga o timer
 	                }
 	            
 				break;
-			case 4: // CASO RECONHE�A A MOEDA DE 25 CENTAVOS
+			case 4: // CASO RECONHEÇA A MOEDA DE 25 CENTAVOS
 					if (ContagemReal < ValorPago) {
 						for (i = 0; i < 25; i = i + 1) {
 							ContagemCent = ContagemCent + 1;
@@ -408,7 +380,7 @@ T1CONbits.TMR1ON = 0;    //bit que liga e desliga o timer
 					}
 				
 				break;
-			case 5: // CASO RECONHE�A A MOEDA DE 10 CENTAVOS
+			case 5: // CASO RECONHEÇA A MOEDA DE 10 CENTAVOS
 					if (ContagemReal < ValorPago) {
 						for (i = 0; i < 10; i = i + 1) {
 							ContagemCent = ContagemCent + 1;
@@ -418,7 +390,7 @@ T1CONbits.TMR1ON = 0;    //bit que liga e desliga o timer
 					}
 				
 				break;
-			case 6: // CASO RECONHE�A A MOEDA DE 5 CENTAVOS
+			case 6: // CASO RECONHEÇA A MOEDA DE 5 CENTAVOS
 					if (ContagemReal < ValorPago) {
 						for (i = 0; i < 5; i = i + 1) {
 							ContagemCent = ContagemCent + 1;
@@ -437,7 +409,7 @@ T1CONbits.TMR1ON = 0;    //bit que liga e desliga o timer
 		
 		
 		if (ContagemReal >= ValorPago) 
-		{ // SE O VALOR INSERIDO FOR MAIOR OU IGUAL O VALOR NECESS�RIO
+		{ // SE O VALOR INSERIDO FOR MAIOR OU IGUAL O VALOR NECESSÁRIO
 			LimpaLCD();
 			PosicionaLCD(1, 5);
 			StringLCD("VALOR PAGO");
