@@ -3,11 +3,11 @@
 O tarifador de pedágio automático foi um projeto realizado como TCC na instituição SENAI "A. Jacob Lafer".
 O principal objetivo foi demonstrar a possibilidade de automatização de pagamentos em lugares como teatros, cinemas, museus, etc usando o microcontrolador PIC18F4550. Para isso, utilizamos como exemplo o pedágio, no GIF abaixo, está uma exemplificação de como seria feita sua aplicação.
 
-![First_gif](https://im7.ezgif.com/tmp/ezgif-7-b268c26d6c6e.gif)
+![First_gif](https://media.giphy.com/media/S9JuOtzOiBnwzRuYRh/giphy.gif)
 
 E logo abaixo está o resultado final do projeto:
 
-![Second_gif](https://im7.ezgif.com/tmp/ezgif-7-df7e9681a9e6.gif)
+![Second_gif](https://media.giphy.com/media/Q5XGqpC02qVaraq94r/giphy.gif)
 
 No início do processo, o LCD mostra o valor total que deve ser pago. A cada moeda inserida no moedeiro, é mostrado o valor total das moedas inseridas, quando o valor atinge o total que deve ser pago, a cancela controlada por um servo motor é levantada e um LED verde é aceso. Quando o carro passa pela cancela e atravessa um feixe de sensor infravermelho, a cancela é abaixada, o LED volta ao vermelha e o LCD mostra o valor para que o motorista seguinte pague.
 
