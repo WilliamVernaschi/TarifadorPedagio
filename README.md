@@ -24,7 +24,11 @@ Abaixo, estão circuitos utilizados para criar a PCB que controla o os periféri
 ![schematic8](https://i.imgur.com/E7pcZ34.png)
 
 Responsáveis pelo projeto:
+
 William Vernaschi
+
 Matheus Amorim
+
 Rafael Carlos
+
 Vinicius Barreto
