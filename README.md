@@ -27,8 +27,8 @@ Responsáveis pelo projeto:
 
 William Vernaschi
 
-Matheus Amorim
+- Matheus Amorim
 
-Rafael Carlos
+- Rafael Carlos
 
-Vinicius Barreto
+- Vinicius Barreto
