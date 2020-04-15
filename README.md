@@ -25,7 +25,7 @@ Abaixo, estão circuitos utilizados para criar a PCB que controla o os periféri
 
 Responsáveis pelo projeto:
 
-William Vernaschi
+- William Vernaschi
 
 - Matheus Amorim
 
